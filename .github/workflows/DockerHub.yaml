@@ -3,7 +3,7 @@ name: Build and Push Docker imageee to Docker Hub
 on:
   push:
     branches:
-      - gitHubActionsAngular
+      - main
 
 jobs:
   push_to_dockerhub:
