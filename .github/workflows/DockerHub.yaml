@@ -7,7 +7,7 @@ on:
 
 jobs:
   push_to_dockerhub:
-    name: Build and Push Docker image
+    name: Build and Push Docker imagee
     runs-on: ubuntu-latest   # ✅ correction ici
     steps:
       - name: Checkout this repo
