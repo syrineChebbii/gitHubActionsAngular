@@ -1,0 +1,30 @@
+name: Build and Push Docker image to Docker Hub
+
+on:
+  push:
+    branches:
+      - gitHubActionsAngular
+
+jobs:
+  push_to_dockerhub:
+    name: Build and Push Docker image
+    runs-on: ubuntu-latest   # ✅ correction ici
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4   # ✅ dernière version stable
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login into Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and Push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: syrinedev123/githubactionsangularp:1.1.${{ github.run_number }}

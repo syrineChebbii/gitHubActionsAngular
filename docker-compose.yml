@@ -1,0 +1,21 @@
+services:
+  angular-app:
+    container_name: angularContainer
+    build: .
+    ports:
+      - "8082:80"
+    networks:
+      - monReseau
+  mysql:
+    image: "mysql:latest"
+    ports:
+      - "3308:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: astonvilla
+      MYSQL_PASSWORD: root
+    networks:
+      - monReseau
+
+networks:
+  monReseau:
