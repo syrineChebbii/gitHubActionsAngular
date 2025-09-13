@@ -10,8 +10,7 @@ jobs:
     name: Build and Push Docker imagee
     runs-on: ubuntu-latest   # ✅ correction ici
     steps:
-      - name: Checkout this repo
-        uses: actions/checkout@v4   # ✅ dernière version stable
+      -    # ✅ dernière version stable
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
