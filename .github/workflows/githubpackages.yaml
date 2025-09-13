@@ -14,7 +14,7 @@ jobs:
           uses: docker/metadata-action@v5
           with:
             images: |
-              ghcr.io/syrinedev123/githubpackages
+              ghcr.io/syrineChebbii/githubpackages
             tags: |
               type=ref,event=branch  
               type=ref,event=pr
