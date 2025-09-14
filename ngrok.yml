@@ -1,0 +1,9 @@
+version: 2
+tunnels:
+  sonar:
+    addr: http://sonarqube:9000
+    proto: http
+    schemes:
+      - https
+      - http
+    domain: cablelaid-twitchily-jeannie.ngrok-free.app
