@@ -1,7 +1,7 @@
 version: 2
 tunnels:
   sonar:
-    addr: http://sonarqube:9000
+    addr: sonarqube:9000
     proto: http
     schemes:
       - https

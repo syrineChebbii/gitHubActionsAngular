@@ -36,9 +36,12 @@ services:
     container_name: ngrok
     depends_on:
       - sonarqube
-    command: tunnel http sonarqube:9000 --authtoken 32dtaIDFI3vahZcokXtySZg4QVZ_35MBgC3zx8yWobhrJ3UpK --region=eu --log=stdout
+    command: start --all --config /etc/ngrok.yml --log=stdout
     networks:
       - sonarnet
+    volumes:
+      - ./ngrok.yml:/etc/ngrok.yml:ro
+
 
 networks:
   sonarnet:
