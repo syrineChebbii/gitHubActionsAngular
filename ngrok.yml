@@ -1,9 +1,7 @@
 version: 2
+authtoken: 32dtaIDFI3vahZcokXtySZg4QVZ_35MBgC3zx8yWobhrJ3UpK
+
 tunnels:
   sonar:
     addr: sonarqube:9000
     proto: http
-    schemes:
-      - https
-      - http
-    domain: cablelaid-twitchily-jeannie.ngrok-free.app
